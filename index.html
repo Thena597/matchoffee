@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Monthsary, My Love 🧸</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'DM Sans',sans-serif;background:#d4d47a;color:#4A3520;overflow-x:hidden}
+  .float{position:fixed;inset:0;pointer-events:none;z-index:0}
+  .float span{position:absolute;bottom:-20px;animation:up 7s linear infinite;opacity:.8}
+  @keyframes up{to{transform:translateY(-110vh) rotate(20deg);opacity:0}}
+  header{text-align:center;padding:42px 20px 8px;position:relative;z-index:1}
+  header p{letter-spacing:3px;font-size:12px;color:#6B9E6A;font-weight:700}
+  header h1{font-family:'Playfair Display',serif;font-size:48px;line-height:1.05;color:#6B9E6A}
+  header h2{font-family:'Playfair Display',serif;font-size:23px;color:#7A5A3A;margin-top:8px}
+  header .sub{max-width:520px;margin:12px auto 0;color:#7A5E4A;line-height:1.6;font-size:15px}
+  .couple{width:320px;max-width:85%;height:340px;object-fit:cover;border-radius:24px;border:7px solid #FFF8EE;box-shadow:0 12px 30px rgba(0,0,0,.15);display:block;margin:20px auto 4px}
+  .couple-caption{text-align:center;font-family:'Playfair Display',serif;font-size:19px;margin-bottom:6px}
+  .teddy-wrap{text-align:center;position:relative;z-index:1;padding:12px 20px 6px}
+  .teddy{font-size:128px;cursor:pointer;display:inline-block;animation:bounce 1.8s ease-in-out infinite;filter:drop-shadow(0 10px 15px rgba(0,0,0,.15))}
+  @keyframes bounce{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-14px) rotate(2deg)}}
+  .teddy:active{transform:scale(1.2) rotate(6deg)}
+  .teddy-wrap .hint{font-weight:700;color:#6B9E6A;margin-top:2px}
+  .teddy-wrap .small{font-size:13px;color:#7A5E4A}
+  .teddy-btn{background:#6B9E6A;color:rgb(145, 107, 107);border:none;padding:13px 26px;border-radius:30px;font-weight:700;cursor:pointer;margin-top:12px;box-shadow:0 8px 18px rgba(107,158,106,.4);font-size:15px}
+  .drinks{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:18px;position:relative;z-index:1}
+  .card{width:300px;background:#FFF8EE;border-radius:20px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.1);text-align:center;padding-bottom:14px}
+  .card img{width:100%;height:200px;object-fit:cover}
+  .card.coffee{border-top:6px solid #8B5E3C}
+  .card.matcha{border-top:6px solid #6B9E6A}
+  .card h3{font-family:'Playfair Display',serif;margin:12px 0 4px}
+  .card p{font-size:14px;color:#7A5E4A;padding:0 14px;line-height:1.5}
+  .badge{display:inline-block;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:700;color:white;margin-top:10px}
+  .badge.brown{background:#8B5E3C}
+  .badge.green{background:#6B9E6A}
+  .section{max-width:1000px;margin:0 auto;padding:10px 20px 20px;text-align:center;position:relative;z-index:1}
+  .section h2{font-family:'Playfair Display',serif;font-size:30px}
+  .section p{color:#7A5E4A;margin-top:6px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+  @media(max-width:650px){.grid{grid-template-columns:repeat(2,1fr)} header h1{font-size:36px} .teddy{font-size:110px}}
+  .env{background:#FFF8EE;border-radius:18px;padding:20px 12px;cursor:pointer;border:2px solid #D9C6A8;transition:.3s}
+  .env.green{border-color:#A8C9A5;background:#EAF3E8}
+  .env:hover{transform:translateY(-5px) rotate(-1deg);box-shadow:0 10px 20px rgba(0,0,0,.1)}
+  .env .e{font-size:38px}
+  .env h3{font-size:15px;margin:8px 0 3px}
+  .env small{color:#6B9E6A;font-weight:700;font-size:11px;letter-spacing:1px}
+  .footer{text-align:center;padding:20px 20px 50px;position:relative;z-index:1}
+  .big-btn{background:#4A3520;color:white;border:none;padding:16px 30px;border-radius:30px;font-weight:700;cursor:pointer;font-size:16px}
+  .final{display:none;font-family:'Playfair Display',serif;font-size:21px;line-height:1.6;max-width:600px;margin:22px auto 0;background:#FFF8EE;padding:24px;border-radius:20px;border:2px solid #6B9E6A}
+  .modal{display:none;position:fixed;inset:0;background:rgba(74,53,32,.75);z-index:99;align-items:center;justify-content:center;padding:20px}
+  .modal.show{display:flex}
+  .box{background:#FFF8EE;max-width:430px;width:100%;border-radius:24px;padding:28px;text-align:center;animation:pop .35s ease;border:4px solid #6B9E6A}
+  @keyframes pop{from{transform:scale(.7) rotate(-3deg);opacity:0}to{transform:scale(1);opacity:1}}
+  .box p{line-height:1.7;color:#5A4633;white-space:pre-line;margin-top:10px}
+  .close{background:#4A3520;color:white;border:none;padding:12px;width:100%;border-radius:30px;margin-top:18px;cursor:pointer}
+  .counter{font-size:12px;color:#6B9E6A;font-weight:700;letter-spacing:2px}
+</style>
+</head>
+<body>
+<div class="float" id="float"></div>
+
+<header>
+  <p>🧸 HAPPY MONTHSARY 💌</p>
+  <h1>HAPPY MONTHSARY</h1>
+  <h2>For My Favorite Person Ever.</h2>
+  <p class="sub">Ginawa ko tong website na to para lang sa'yo. Kasi ikaw yung favorite kong ka-kwento, ka-kape, at ka-kulitan araw-araw.</p>
+</header>
+
+<!-- PIC NIYO: Save mo pic niyo as couple.jpg -->
+<img src="assets/hands.jfif.jpg" class="couple" alt="Us">
+<p class="couple-caption">Ikaw at Ako, palagi ❤️</p>
+
+<div class="teddy-wrap">
+  <div class="teddy" id="teddy" onclick="teddyClick()">🧸</div>
+  <p class="hint">☕ + 🍵 = TAYO</p>
+  <p class="small">Pindutin mo si Teddy Bear, may secret message siya!</p>
+  <br>
+  <button class="teddy-btn" onclick="teddyClick()">Click the Teddy Bear 🧸</button>
+</div>
+
+<div class="drinks">
+  <div class="card coffee">
+    <img src="assets/coffee.jfif.jpg" alt="Coffee">
+    <span class="badge brown">☕ TEAM COFFEE - AKO</span>
+    <h3>Ako yung Kape mo</h3>
+    <p>i miss u, everyday pu </p>
+  </div>
+  <div class="card matcha">
+    <img src="assets/matcha.jfif.jpg" alt="Matcha">
+    <span class="badge green">🍵 TEAM MATCHA - IKAW</span>
+    <h3>At ikaw yung Matcha ko</h3>
+    <p>You are my peace of mind sa magulo kong  mundo.</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>6 na Sobre, 6 na Dahilan 💌</h2>
+  <p>Pindutin mo isa-isa. Si Teddy Bear na bahala sa'yo!</p>
+  <div class="grid" id="grid"></div>
+</div>
+
+<div class="footer">
+  <button class="big-btn" onclick="showFinal()">Pindutin mo to pag natapos mo na lahat 💖</button>
+  <div class="final" id="finalMsg">Happy 1st Monthsary, My Wife.<br><br>Kahit nakakapagod ang mundong ito wag tayong bumitaw sa isa't isa.<br><br>I love you, palagi. ❤️<br>- Your Wife</div>
+</div>
+
+<div class="modal" id="modal" onclick="if(event.target===this) closeModal()">
+  <div class="box">
+    <div style="font-size:50px" id="mEmoji">🧸</div>
+    <div class="counter" id="mCount">MESSAGE 1 / 6</div>
+    <h3 id="mTitle" style="font-family:'Playfair Display',serif;font-size:23px;margin-top:6px">Para Sa'yo</h3>
+    <p id="mText"></p>
+    <button class="close" onclick="closeModal()">Sealed with a kiss 💋</button>
+  </div>
+</div>
+
+<script>
+const msgs = [
+  {emoji:"☕", title:"Sobre #1 - Coffee Date", text:"Naalala mo ba nung 3 weeks tayong hindi nagpansinan?\n\nSabi ko sa sarili ko wala lang toh, HAHAHA\n\nHindi lang ako basta kape, kase ako na ang  KAPEling mo sa araw-araw yieee, HAHAHAHA."},
+  {emoji:"🍵", title:"Sobre #2 - Matcha Mood", text:"Kapag pagod kana sandal kalang sakin.\n\nYung tipong isang ngiti mo lang, naiirita nako kase you're teasing me hmmph!.\n\nThank you kasi ikaw yung pahinga ko."},
+  {emoji:"🧸", title:"Sobre #3 - Thank You", text:"Kapag hirap kana magpahinga kalang sakin.\n\nKahit minsan mahirap ako intindihin, kahit mataray, mainitin ang ulo ko huhu, pinili mo pa rin akong mahalin.\n\nSobrang swerte ko sa'yo."},
+  {emoji:"🥺", title:"Sobre #4 - Sorry & Promise", text:"Sorry sa mga times na napapaiyak kita.\n\nPromise ko sa'yo, mas magiging better ako araw-araw. Para sa'yo, para sa atin.\n\nHindi kita iiwan."},
+  {emoji:"🏡", title:"Sobre #5 - Future Natin", text:"Ikaw lang ang nakikita ko sa future ko.\n\nMahal na mahal kita ."},
+  {emoji:"❤️", title:"Sobre #6 - I Love You", text:"sorry pu, nagmamadali lang akong gawin ang website na ito ngayong umaga alam mona dami naming need gawin huhu, naway magustuhan mo parin I LOVE YOU MY WIFE!!:\n\nHindi lang to monthsary. Araw-araw, pinipili kita.\n\nI love you, my wife. Forever."},
+];
+let teddyIndex = 0;
+function openMsg(i){
+  const m = msgs[i];
+  document.getElementById('mEmoji').innerText = m.emoji;
+  document.getElementById('mTitle').innerText = m.title;
+  document.getElementById('mText').innerText = m.text;
+  document.getElementById('mCount').innerText = `MESSAGE ${i+1} / 6`;
+  document.getElementById('modal').classList.add('show');
+}
+function teddyClick(){
+  const teddy = document.getElementById('teddy');
+  teddy.style.transform = 'scale(1.3) rotate(10deg)';
+  setTimeout(()=> teddy.style.transform = '', 300);
+  openMsg(teddyIndex);
+  teddyIndex = (teddyIndex + 1) % msgs.length;
+}
+function closeModal(){ document.getElementById('modal').classList.remove('show'); }
+function showFinal(){
+  document.getElementById('finalMsg').style.display='block';
+  window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'});
+}
+const grid = document.getElementById('grid');
+msgs.forEach((m,i)=>{
+  const d = document.createElement('div');
+  d.className = 'env ' + (i%2===0 ? '' : 'green');
+  d.innerHTML = `<div class="e">${m.emoji}</div><h3>${m.title}</h3><small>CLICK TO OPEN ✉️</small>`;
+  d.onclick = ()=> openMsg(i);
+  grid.appendChild(d);
+});
+const float = document.getElementById('float');
+const emojis = ['❤️','💚','☕','🍵','🧸','💌'];
+for(let i=0;i<22;i++){
+  const s=document.createElement('span');
+  s.innerText=emojis[Math.floor(Math.random()*emojis.length)];
+  s.style.left=Math.random()*100+'%';
+  s.style.animationDelay=Math.random()*6+'s';
+  s.style.fontSize=(14+Math.random()*18)+'px';
+  float.appendChild(s);
+}
+</script>
+</body>
+</html>
